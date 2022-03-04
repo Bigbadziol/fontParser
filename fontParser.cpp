@@ -1,10 +1,4 @@
-﻿/*
-    Wazne, zerknac jaki jest akutalnie ustawiony typ danych w glyph_t
-    int xOffset , yOffset;      - wersja bazowa z ESP32
-    int16_t xOffset , yOffset;  - zawsze pare bajtow zaoszczedzone
-} glyph_t;
-
-*/
+﻿
 #pragma warning(disable : 4996)     //dla fopen.
 
 #include <fstream>
@@ -63,10 +57,8 @@ typedef struct {
     uint8_t width;
     uint8_t height;
     uint8_t xAdvance;
-    int8_t xOffset;
-    int8_t yOffset;
-    //int16_t xOffset;   // - opis na gorze pliku.
-    //int16_t yOffset;
+    int8_t xOffset; //-127..127
+    int8_t yOffset; //-127..127
 } glyph_t;
 
 typedef struct {
