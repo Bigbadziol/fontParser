@@ -1,4 +1,4 @@
-﻿
+﻿//Tomaszkowa zmiana numer 1
 #pragma warning(disable : 4996)     //dla fopen.
 
 #include <fstream>
